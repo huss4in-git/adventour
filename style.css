@@ -1,0 +1,730 @@
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: 'Monument Grotesk Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Monument Grotesk Regular'), url('/ABCMonumentGrotesk-Regular.woff2') format('woff');
+  }
+
+.container_root{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:5.625rem;
+  padding-right:5.625rem
+}
+@media screen and (max-width:1024px){
+  .container_root{
+      padding-left:1.25rem;
+      padding-right:1.25rem
+  }
+}
+.container_root.Container_noGutters__wUATB{
+  padding-left:0;
+  padding-right:0
+}
+.container_root.Container_xs__IPEAu{
+  max-width:375px
+}
+.container_root.Container_sm__yYwrg{
+  max-width:640px
+}
+.container_root.Container_md__y6QuA{
+  max-width:768px
+}
+.container_root.Container_xl__8FQ28{
+  max-width:1260px
+}
+.container_root.Container_lg__o33qT{
+  max-width:1024px
+}
+.navitem_container{
+  display:flex;
+  align-items:center;
+  height:100%;
+  color:#4d4d4d;
+  padding:.25rem 1rem;
+  margin-right:.5rem;
+  position:relative;
+  cursor:pointer;
+  font-size:1.3rem;
+  font-family: 'Bebas Neue', sans-serif;
+  -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+.navitem_container:before{
+  content:"";
+  transform:scale(0)
+}
+.navitem_container:after{
+  content:"";
+  position:absolute;
+  right:-.375rem;
+  width:.0625rem;
+  height:.5rem;
+  background-color:hsla(0,0%,78%,.08);
+  border-radius:.25rem
+}
+.navitem_container:last-child{
+  margin-right:0
+}
+.navitem_container:last-child:after{
+  content:none
+}
+  .navitem_container.NavigationItem_selected__XClLc{
+      padding:.25rem 1rem .25rem 2rem
+  }
+  .navitem_container.NavigationItem_selected__XClLc:before{
+      content:"";
+      display:block;
+      position:absolute;
+      top:50%;
+      left:1rem;
+      width:.375rem;
+      height:.375rem;
+      margin-top:-.1875rem;
+      border-radius:50%;
+      background-color:#fff;
+      transform:scale(1);
+      transition:transform 225ms cubic-bezier(.4,0,.2,1) 225ms
+  }
+  .navitem_container .NavigationItem_selection__aFIvN{
+      background-color:hsla(0,0%,78%,.08);
+      border:.0625rem solid hsla(0,0%,78%,.01);
+      border-radius:1.25rem;
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0
+  }
+  .header_container{
+      display:flex;
+      padding-top:1.5rem;
+      padding-bottom:1.5rem;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:999
+  }
+  
+  @supports((-webkit-backdrop-filter:none) or (backdrop-filter:none)){
+      .header_container:before{
+          background:rgba(2,1,2,.4);
+          -webkit-backdrop-filter:blur(.75rem);
+          backdrop-filter:blur(.75rem)
+      }
+  }
+  @media screen and (max-width:1024px){
+      .header_container{
+          justify-content:center
+      }
+  }
+  .header_container:after{
+      content:"";
+      flex:1 1
+  }
+  .header_container .header_logo{
+      flex:1 1
+  }
+  @media screen and (max-width:1024px){
+      .header_container .header_navbar{
+          position:fixed;
+          width: 360px;
+          bottom:1.25rem;
+          background-color:transparent;
+          border-radius:2.5rem
+      }
+      .navitem_container{
+          font-size: 15.5px;
+          margin-left: -4px;
+      }
+      }
+      .header_container .header_navbar .header_grid{
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          background-color:hsla(0,0%,78%,.08);
+          height:2.5625rem;
+          border:.0625rem solid hsla(0,0%,78%,.02);
+          border-radius:2.5rem;
+          padding:.25rem
+      }
+
+      @media screen and (max-width:768px){
+          .container_root{
+              padding-left:1.25rem;
+              padding-right:1.25rem;
+          }
+      }
+      .container_root.Container_noGutters__wUATB{
+          padding-left:0;
+          padding-right:0
+      }
+      .container_root.Container_xs__IPEAu{
+          max-width:375px
+      }
+      .container_root.Container_sm__yYwrg{
+          max-width:640px
+      }
+      .container_root.Container_md__y6QuA{
+          max-width:768px
+      }
+      .container_root.Container_xl__8FQ28{
+          max-width:1260px
+      }
+      .container_root.Container_lg__o33qT{
+          max-width:1024px
+      }
+
+      #logo{
+        height: 55px;
+      }
+      .row{
+        position: absolute;
+        top: 33%;
+      }
+      .wel{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-left: 60px;
+        font-size: 95px;
+        margin-bottom: 25px;
+        line-height: 90%
+      }
+      .desc{
+        color: rgb(53, 53, 53);
+        margin-left: 60px;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .wel1{
+        color: #333333;
+      }
+      .exc{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-bottom: 30px;
+        font-size: 22px;
+        margin-left: 60px;
+      }
+      .cont{
+        font-family: 'Bebas Neue', sans-serif;
+        padding: 25px;
+        font-size: 22px;
+        color: bisque
+      }
+      #bgimg{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .adv{
+        color: rgb(200, 149, 88);
+      }
+      #auh{
+        margin: 45px;
+        object-fit: cover;
+        margin-left: 70px;
+      }
+      .abudhabi{
+        color: rgb(210, 150, 76);
+      }
+      .choose{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .des{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-left: 4px;
+        font-size: 22px;
+        margin-top: 50px;
+      }
+      .auhinf{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 55px;
+        line-height: 100%;
+      }
+      .auhdesc{
+        font-family: 'Open Sans', sans-serif;
+      }
+      .info{
+        margin-left: 40px;
+        margin-top: 45px;
+      }
+      .why{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 55px;
+        line-height: 100%;
+        margin-left: 80px;
+      
+      }
+      #us{
+        margin-right: 70px;
+        object-fit: cover;
+        margin-left: 140px;
+        margin-top: 30px;
+      }
+      .choosedesc{
+        margin-top: 20px;
+        margin-left: 80px;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .dest{
+        font-family: 'Bebas Neue', sans-serif;
+        display: flex;
+        align-items: center;
+        margin-left: 90px;
+        font-size: 40px;
+        margin-bottom: 50px;
+        margin-top: 80px;
+      }
+      .destin1{
+        color: #1e1e1e;
+      }
+      .avisit{
+        color: #1e1e1e;
+        font-family: 'Bebas Neue', sans-serif;
+        display: flex;
+        margin-left: 80px;
+      }
+      .des1{
+        margin-left: 84px;
+        font-size: 22px;
+      }
+      .info1{
+        margin-top: 50px;
+      }
+      .info3{
+        margin-top: 50px;
+      }
+      .info4{
+        margin-top: 50px;
+      }
+      .inp {
+        border:none;
+        background: transparent;
+        border-bottom: 1px solid #ffffff;
+        font-family: 'Open Sans', sans-serif;
+        font-size:15px;
+        padding: 5px 10px;
+        width: 300px;
+        outline: none;
+        color: white;
+     }
+     .inp1 {
+      border:none;
+      margin-left: 15px;
+      background: transparent;
+      border-bottom: 1px solid #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      font-size:15px;
+      padding: 5px 10px;
+      width: 300px;
+      outline: none;
+      color: white;
+   }
+   .inp2 {
+    border:none;
+    background: transparent;
+    margin-right: 30px;
+    border-bottom: 1px solid #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size:15px;
+    padding: 5px 10px;
+    width: 300px;
+    outline: none;
+    color: white;
+ }
+    [placeholder]:focus::-webkit-input-placeholder {
+        transition: text-indent 0.4s 0.4s ease; 
+        font-family: 'Open Sans', sans-serif;
+        text-indent: -100%;
+        color: white;
+        opacity: 1;
+     }
+     
+    .bg-img {
+      background-image: url("./Images/Untitled\ design.jpg");
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .foot{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 21%;
+      background-color: transparent;
+    }
+    .inbox{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 18%;
+      background-color: transparent;
+    }
+    .foot1 {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 20%;
+      background-color: transparent;
+    }
+    .foot2 {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 24%;
+      background-color: transparent;
+    }
+    .footbtn{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 28%;
+      background-color: transparent;
+    }
+    .foot3 {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      top: 49%;
+      background-color: transparent;
+    }
+    .lastfoot{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      color: white;
+      margin-left: 60px
+    }
+    .term{
+      display: flex;
+    }
+    .lastfoot1{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      color: white;
+      margin-right: 50px
+    }
+    .lastfoot2{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      color: white;
+      margin-right: 50px
+    }
+    .lastfoot3{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      color: white;
+      margin-right: 60px
+    }
+    .lastfoot1:hover{
+      color: #1e1e1e; 
+      transition: 0.4s;
+    }
+    .lastfoot2:hover{
+      color: #1e1e1e; 
+      transition: 0.4s;
+    }
+    .lastfoot3:hover{
+      color: #1e1e1e; 
+      transition: 0.4s;
+    }
+    .rad{
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+      font-family: 'Open Sans', sans-serif;
+      margin-left: 15px;
+    }
+    .inb{
+      color: rgb(255, 255, 255, 0.8);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 23px;
+      letter-spacing: 0.15em;
+    }
+    .foothead{
+      color: rgb(255, 255, 255, 0.8);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 170px;
+      letter-spacing: 0.25em;
+    }
+    .sub{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: bisque
+    }
+    .radio{
+      display: flex;
+      flex-direction: row;
+    }
+    .btn1{
+      margin-left: 60px;
+      margin-top: 20px;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    @media screen and (max-width: 880px){
+      #bgimg{
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+      }
+      .row{
+        position: absolute;
+        top: 30%;
+      }
+      .exc{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-bottom: 20px;
+        margin-left: 22px;
+        font-size: 22px;
+        margin-top: -90px;
+      }
+      .wel{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 80px;
+        margin-left: 22px;
+        margin-bottom: 25px;
+        line-height: 90%
+      }
+      .desc{
+        color: rgb(255, 255, 255);
+        margin-left: 22px;
+        margin-top: 190px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+      }
+      .btn1{
+        margin-left: 20px
+      }
+      .info{
+        margin-left: 40px;
+        margin-top: 1px;
+      }
+      .des{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-left: 4px;
+        font-size: 22px;
+        margin-top: 5px;
+      }
+      .des1{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-left: 84px;
+        font-size: 22px;
+        margin-top: 0px;
+      }
+      .choose{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      #auh{
+        margin: 45px;
+        object-fit: cover;
+        margin-left: 10px;
+        width: 355px;
+        height: 500px;
+      }
+      .info1{
+        margin-top: 20px;
+        margin-left: -55px;
+      }
+      .info{
+        margin-left: 25px;
+      }
+      .info1{
+        margin-top: 0px;
+      }
+      .info3{
+        margin-top: 0px;
+      }
+      .info4{
+        margin-top: -30px;
+      }
+      #us{
+        margin-left: 20px;
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .foothead{
+        color: rgb(255, 255, 255, 0.9);
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 60px;
+        margin-left: 10px;
+        letter-spacing: 0.25em;
+        margin-top: 70px;
+      }.inb{
+        color: white;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.15em;
+        margin-top: 20px;
+      }
+      .inp {
+        border:none;
+        background: transparent;
+        border-bottom: 1px solid #ffffff;
+        font-family: 'Open Sans', sans-serif;
+        font-size:15px;
+        padding: 5px 10px;
+        width: 300px;
+        outline: none;
+        color: white;
+     }
+     .foot{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 17%;
+      background-color: transparent;
+    }
+    .inbox{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 17%;
+      background-color: transparent;
+    }
+     .foot1 {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 20%;
+      background-color: transparent;
+    }
+    .foot2 {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 22%;
+      background-color: transparent;
+    }
+    .footbtn{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 25%;
+      background-color: transparent;
+    }
+    .bg-img {
+      background-image: url("./Images/Untitled\ design.jpg");
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .rad{
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+      font-family: 'Open Sans', sans-serif;
+      margin-left: 15px;
+      
+    }
+    .radio{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    .inp1 {
+      border:none;
+      margin-left: 0px;
+      margin-top: 15px;
+      background: transparent;
+      border-bottom: 1px solid #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      font-size:15px;
+      padding: 5px 10px;
+      width: 300px;
+      outline: none;
+      color: white;
+   }
+   .inp2 {
+    border:none;
+    background: transparent;
+    margin-right: 0px;
+    border-bottom: 1px solid #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size:15px;
+    padding: 5px 10px;
+    width: 300px;
+    outline: none;
+    color: white;
+   }
+    .foot3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    top: 30%;
+    background-color: transparent;
+   }
+   .term{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lastfoot{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.8);
+    margin-left: 0px
+  }
+  .lastfoot1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.8);
+    margin-right: 0px;
+  }
+  .lastfoot2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.8);
+    margin-right: 0px;
+  }
+  .lastfoot3{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.8);
+    margin-right: 0px;
+  }
+  .info1{
+    margin-top: 30px;
+  }
+        
+  }
+    
+    
+
+      
